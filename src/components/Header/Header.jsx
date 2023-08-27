@@ -9,7 +9,7 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import navbarItems from "../../utils/navbarItems";
 import "./Header.scss";
 
@@ -102,7 +102,8 @@ const useStyles = createStyles((theme) => ({
 
 const Header = () => {
   const [opened, { toggle, close }] = useDisclosure(false);
-  const [active, setActive] = useState(navbarItems[0].link);
+  const location = useLocation();
+  const [active, setActive] = useState(location.pathname);
   const { classes, cx } = useStyles();
   const navigate = useNavigate();
 
