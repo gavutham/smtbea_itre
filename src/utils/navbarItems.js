@@ -11,6 +11,10 @@ const navbarItems = [
     link: "/contact",
     label: "Contact",
   },
+  {
+    link: "/team",
+    label: "Committee",
+  },
 ];
 
 export default navbarItems;

@@ -1,0 +1,45 @@
+/* eslint-disable react/prop-types */
+import { Card, Group, Image, Text } from "@mantine/core";
+import "./MemberCard.scss";
+import { GoMail } from "react-icons/go";
+
+const MemberCard = ({ member }) => {
+  const mailTo = (email) => {
+    window.location.href = `mailto:${email}`;
+  };
+
+  return (
+    <Card
+      shadow="sm"
+      padding="lg"
+      radius="md"
+      withBorder
+      className="memberCard"
+    >
+      <Card.Section>
+        <Image src={member.img} height={300} alt="profile-img" />
+      </Card.Section>
+
+      <Group position="apart" mt="md" mb="xs">
+        <Text weight={500}>{member.name}</Text>
+      </Group>
+
+      <Text size="md" color="dimmed">
+        {member.position}
+      </Text>
+
+      <Text size="sm" color="dimmed" mb={20}>
+        {member.desc}
+      </Text>
+
+      <Group className="email" onClick={() => mailTo(member.email)}>
+        <GoMail size={15} className="icon" />
+        <Text size="sm" color="dimmed" className="address">
+          {member.email}
+        </Text>
+      </Group>
+    </Card>
+  );
+};
+
+export default MemberCard;
