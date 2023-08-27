@@ -1,6 +1,6 @@
 const team = [
   {
-    name: "Dr.N.Venkateswaran",
+    name: "Dr. N.Venkateswaran",
     position: "Chairman",
     desc: "Professor, Dept. of ECE, Sri SivaSubramaniya Nadar College Of Engineering",
     email: "venkateswaran.iete@gmail.com",
@@ -21,28 +21,28 @@ const team = [
     img: "/noprofile.png",
   },
   {
-    name: "Mrs T J Jeyaprabha",
+    name: "Mrs. T J Jeyaprabha",
     position: "Honarary Treasurer",
     desc: "Assistant Professor, Dept. of ECE, Sri Venkateswara College of Engineering",
     email: "jprabha@svce.ac.in",
     img: "/team/jeyaprabha.jpg",
   },
   {
-    name: "Dr C Udayakumar",
+    name: "Dr. C Udayakumar",
     position: "EC Member",
     desc: "",
     email: "cukumar@gmail.com",
     img: "/noprofile.png",
   },
   {
-    name: "Dr V Thulasibai",
+    name: "Dr. V Thulasibai",
     position: "EC Member",
     desc: "",
     email: "thulasi9840@gmail.com",
     img: "/noprofile.png",
   },
   {
-    name: "Mr D Vijendrababu",
+    name: "Mr. D Vijendrababu",
     position: "EC Member",
     desc: "",
     email: "dvijendrababu@gmail.com",
@@ -70,14 +70,14 @@ const team = [
     img: "/noprofile.png",
   },
   {
-    name: "Dr Vaishali D",
+    name: "Dr. Vaishali D",
     position: "Co-opted Member",
     desc: "",
     email: "vaishali.b@vdp.srmuniv.ac.in",
     img: "/team/vaishali.jpg",
   },
   {
-    name: "Mr Arun",
+    name: "Mr. Arun",
     position: "Co-opted Member",
     desc: "",
     email: "snatarajan1967@gmail.com",

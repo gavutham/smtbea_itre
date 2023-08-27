@@ -21,16 +21,20 @@ const MemberCard = ({ member }) => {
       </Card.Section>
 
       <Group position="apart" mt="md" mb="xs">
-        <Text weight={500}>{member.name}</Text>
+        <Text size="lg" weight={400}>
+          {member.name}
+        </Text>
       </Group>
 
-      <Text size="md" color="dimmed">
+      <Text size="md" color="dimmed" weight={500} mb={10}>
         {member.position}
       </Text>
 
-      <Text size="sm" color="dimmed" mb={20}>
-        {member.desc}
-      </Text>
+      {member.desc && (
+        <Text size="sm" color="dimmed" mb={20}>
+          {member.desc}
+        </Text>
+      )}
 
       <Group className="email" onClick={() => mailTo(member.email)}>
         <GoMail size={15} className="icon" />
