@@ -4,9 +4,15 @@ import "./Home.scss";
 import ParticlesBackground from "../../components/Particles/ParticlesBackground";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { useNavigate } from "react-router";
+import events from "../../utils/events";
+import EventCard from "../../components/EventCard/EventCard";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  const reqEvents = events.slice(-4, events.length);
+  reqEvents.reverse();
+
   return (
     <div>
       <ParticlesBackground />
@@ -51,6 +57,24 @@ const Home = () => {
             alt="discussion-pic"
             className="picture"
           />
+        </div>
+        <div className="events">
+          <div className="heading">
+            <Text className="title">Recent Events</Text>
+            <Button
+              variant="white"
+              rightIcon={<BsBoxArrowInUpRight stroke="4" />}
+              onClick={() => navigate("/events")}
+            >
+              All Events
+            </Button>
+          </div>
+
+          <div className="eventList">
+            {reqEvents.map((e) => (
+              <EventCard key={e.name} event={e} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
