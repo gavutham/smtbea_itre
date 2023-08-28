@@ -1,3 +1,136 @@
+@import "../../utils/constants.scss";
+
 .home {
-  // height: calc(2 * 100vh);
+  .landing {
+    min-height: calc(100vh - 75px);
+    max-height: max-content;
+    display: flex;
+    align-items: center;
+    gap: 250px;
+
+    .logo {
+      border-radius: 50%;
+      transition: all 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .motto {
+      margin-left: 200px;
+      font-size: 50px;
+      color: rgb(196, 196, 196);
+      max-width: 500px;
+      font-weight: 900;
+    }
+  }
+
+  .quote {
+    padding: 0 50px;
+    min-height: calc(100vh - 75px);
+    max-height: max-content;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img {
+      border: 1px solid lightgray;
+      background-color: white;
+      border-radius: 50%;
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .quoteContent {
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+
+      .quoteText {
+        font-size: 36px;
+        font-weight: 700;
+        max-width: 600px;
+        word-spacing: 4px;
+      }
+      s .author {
+        color: gray;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .about {
+    min-height: calc(100vh - 75px);
+    max-height: max-content;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 100px;
+    background-color: #cfd1e4;
+
+    img {
+      max-width: 500px;
+
+      border-radius: 69% 31% 61% 39% / 36% 63% 37% 64%;
+    }
+
+    .contents {
+      .heading {
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 65px;
+      }
+      .desc {
+        font-size: 20px;
+        margin-bottom: 50px;
+        line-height: 36px;
+      }
+      Button {
+        color: black;
+        background-color: transparent;
+        padding: 0;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .events {
+    min-height: calc(100vh - 125px);
+    max-height: max-content;
+    background-color: white;
+    padding: 25px 50px;
+
+    .heading {
+      display: flex;
+      align-items: baseline;
+
+      Button {
+        color: black;
+        background-color: transparent;
+        padding: 0;
+        text-decoration: underline;
+        margin-bottom: 25px;
+        margin-left: 20px;
+      }
+
+      .title {
+        font-size: 36px;
+        font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .eventList {
+      max-height: 80%;
+      display: flex;
+      justify-content: space-between;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+  }
 }
