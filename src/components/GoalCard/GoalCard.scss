@@ -1,0 +1,37 @@
+.goalCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+
+  img {
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 1px solid lightgray;
+    object-fit: cover;
+
+    box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+
+  .desc {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(75, 75, 75);
+  }
+
+  &:hover {
+    transform: translateY(-20px);
+  }
+}
