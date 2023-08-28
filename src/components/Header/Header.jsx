@@ -8,7 +8,7 @@ import {
   Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import navbarItems from "../../utils/navbarItems";
 import "./Header.scss";
@@ -106,6 +106,10 @@ const Header = () => {
   const [active, setActive] = useState(location.pathname);
   const { classes, cx } = useStyles();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setActive(location.pathname);
+  }, [location]);
 
   const items = navbarItems.map((link) => (
     <a

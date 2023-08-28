@@ -1,9 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Text } from "@mantine/core";
+import { Button, Text } from "@mantine/core";
 import "./Home.scss";
 import ParticlesBackground from "../../components/Particles/ParticlesBackground";
+import { BsBoxArrowInUpRight } from "react-icons/bs";
+import { useNavigate } from "react-router";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <ParticlesBackground />
@@ -23,6 +26,31 @@ const Home = () => {
               - NARENDRA MODI, HON’BLE PRIME MINISTER OF INDIA.
             </Text>
           </div>
+        </div>
+        <div className="about">
+          <div className="contents">
+            <Text className="heading">What we Do?</Text>
+            <Text className="desc">
+              Chennai Centre of IETE is committed to attain commanding heights
+              and achieve the status of “Centre of Excellence” in Technical,
+              Engineering & Management education by harnessing the best
+              practices in educational innovation and through its concerted
+              endeavors like quality teaching, industrial consultancy and
+              training to the aspirants including corporate training.
+            </Text>
+            <Button
+              variant="white"
+              rightIcon={<BsBoxArrowInUpRight stroke="4" />}
+              onClick={() => navigate("/about")}
+            >
+              Know more
+            </Button>
+          </div>
+          <img
+            src="/discussion.jpeg"
+            alt="discussion-pic"
+            className="picture"
+          />
         </div>
       </div>
     </div>
