@@ -8,6 +8,7 @@ import Team from "./pages/Team/Team";
 import Events from "./pages/Events/Events";
 import Chencon from "./pages/Chencon/Chencon";
 import Archive from "./pages/Archive/Archive";
+import Membership from "./pages/Membership/Membership";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/membership",
+        element: <Membership />,
       },
       {
         path: "/events",

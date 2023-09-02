@@ -12,12 +12,16 @@ const navbarItems = [
     label: "Events",
   },
   {
+    link: "/chencon",
+    label: "Chencon",
+  },
+  {
     link: "/team",
     label: "Committee",
   },
   {
-    link: "/chencon",
-    label: "Chencon",
+    link: "/membership",
+    label: "Membership",
   },
   {
     link: "/archive",
