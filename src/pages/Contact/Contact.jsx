@@ -11,7 +11,7 @@ import { useForm } from "@mantine/form";
 import DETAILS from "../../utils/contactDetails";
 import "./Contact.scss";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant2, zoomIn } from "../../utils/motion";
+import { fadeIn, textVariant2 } from "../../utils/motion";
 
 const Contact = () => {
   const form = useForm({
@@ -119,15 +119,11 @@ const Contact = () => {
         </div>
         <div className="mapContainer">
           <Text className="title">Find us live here</Text>
-          <motion.iframe
+          <iframe
             className="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7079564886867!2d80.25558021413603!3d13.054252116592973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52663edc820433%3A0x9d3202883a213b07!2sInstitute%20of%20Electronics%20and%20Telecommunication%20Engineers!5e0!3m2!1sen!2sin!4v1609237251098!5m2!1sen!2sin"
             allowfullscreen="false"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
-            variants={zoomIn(0, 0.7)}
-          ></motion.iframe>
+          ></iframe>
         </div>
       </div>
     </>

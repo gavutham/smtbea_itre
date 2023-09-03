@@ -120,7 +120,7 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("md")]: {
       flexDirection: "column",
       gap: rem(35),
-      marginTop: `50px`
+      marginTop: `50px`,
     },
   },
 
