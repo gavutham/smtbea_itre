@@ -15,11 +15,6 @@
     background-color: rgb(226, 228, 243);
   }
 
-  #membershipTitle {
-    margin-top: 5rem;
-    font-weight: bolder;
-  }
-
   .button {
     color: black;
     background-color: transparent;
@@ -46,6 +41,20 @@
       background-color: rgb(50, 90, 128);
       color: white;
       cursor: pointer;
+    }
+  }
+
+  @include mobile {
+    #whyJoinUs {
+      align-items: start;
+      padding-top: 30px;
+    }
+  }
+
+  @include tablet {
+    #whyJoinUs {
+      align-items: start;
+      // padding-top: 30px;
     }
   }
 }
