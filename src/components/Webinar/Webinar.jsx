@@ -1,9 +1,12 @@
 import { Button, Text } from "@mantine/core";
 import "./Webinar.scss";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../../utils/motion";
+import { fadeIn } from "../../utils/motion";
+import { BsBoxArrowInUpRight } from "react-icons/bs";
+import { useNavigate } from "react-router";
 
 const Webinar = () => {
+  const navigate = useNavigate();
   return (
     <motion.div
       className="webinar"
@@ -12,48 +15,30 @@ const Webinar = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
     >
-      <Text className="title">Upcoming Event</Text>
+      <Text className="title">Rules & Regulations</Text>
       <div className="top">
         <div className="left">
-          <Text className="eventTitle">Webinar on IoT Security(WISE-2022)</Text>
-          <Text className="date">on 30th May, 2022</Text>
-
-          <motion.img
-            variants={textVariant(1.2)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
-            src="/event/iotsec.jpg"
-            alt="event-img"
-            className="mobileImg"
-          />
-          <Text className="by">
-            SETS Chennai & C-DAC Hyderabad in collaboration with ISEA
-          </Text>
           <Text className="info">
-            All interested members are requested to register at the following
-            link to participate in the webinar 👉
+            The authors are requested to mail their abstracts in Word format for
+            oral presentations to smtbea2024@gmail.com. The abstract is limited
+            to one page, including figures, tables and references. The text
+            should be in Times New Roman, with sizes 14 for the title and 12 for
+            the rest and 1.5 line spcaing. The selected abstracts will be
+            allowed for ORAL presentation. Best paper awards will be given.
             <Button
-              className="register"
-              color="dark"
-              ml={12}
-              onClick={() =>
-                window.open("https://infosecawareness.in/wise2022", "_blank")
-              }
+              variant="white"
+              rightIcon={<BsBoxArrowInUpRight stroke="4" />}
+              onClick={() => navigate("/event#register")}
             >
-              Register Here
+              Registration Link
             </Button>
           </Text>
         </div>
-        <div className="right">
-          <img src="/event/iotsec.jpg" alt="event-img" />
-        </div>
       </div>
-      <div className="bottom">
+      <div className="bottom" id="register">
         <Text className="note">
           <span>Note: </span>
-          Participation certificate will be issued to all the registered
-          participants after attending all the sessions.
+          Indian Participants - Strictly offline
         </Text>
       </div>
     </motion.div>

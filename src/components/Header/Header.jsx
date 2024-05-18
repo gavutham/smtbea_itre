@@ -12,8 +12,6 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import navbarItems from "../../utils/navbarItems";
 import "./Header.scss";
-import { motion } from "framer-motion";
-import { headerVariants } from "../../utils/motion";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -133,14 +131,8 @@ const Header = () => {
 
   return (
     <MHeader height={75} className={`${classes.header} header`}>
-      <motion.div
-        className={classes.wrapper}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        variants={headerVariants}
-      >
-        <Text className="logo">IETE</Text>
+      <div className={classes.wrapper}>
+        <Text className="logo">SMTBEA - ITRE</Text>
         <Group spacing={15} className={classes.links}>
           {items}
         </Group>
@@ -159,7 +151,7 @@ const Header = () => {
             </Paper>
           )}
         </Transition>
-      </motion.div>
+      </div>
     </MHeader>
   );
 };

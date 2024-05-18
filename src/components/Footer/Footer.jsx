@@ -182,7 +182,7 @@ const Footer = () => {
   const theme = useMantineTheme();
 
   const openEmail = () => {
-    window.location.href = "mailto:ietechennai@gmail.com";
+    window.location.href = "mailto:smtbea2024@gmail.com";
   };
 
   const groups = footerGroups.map(() => {
@@ -223,98 +223,60 @@ const Footer = () => {
         <div className={classes.inner}>
           <div className={classes.logo}>
             <Text className={classes.title} id="title">
-              IETE Chennai
+              SMTBEA - ITRE
             </Text>
             <Text
               size="sm"
               color="dimmed"
               className={`description ${classes.description}`}
             >
-              Phone: 044 2835 0773
+              Phone: +91 8939316518
               <br />
-              <span onClick={openEmail}>Email: ietechennai@gmail.com</span>
+              <span onClick={openEmail}>Email: srinivasanm@ssn.edu.in</span>
             </Text>
             <div className={classes.tabletAddress}>
               <Text className={classes.title}>Address</Text>
               <Text size="sm" color="dimmed" className={classes.description}>
-                IETE Chennai centre,
+                SSN RC, Department of Physcis,
                 <br />
-                No: 37, Tamil Nadu 600086
+                SSNCE, Kalavakkam,
                 <br />
-                Conran Smith Road Entrance Peters Road,
+                Chennai, 603110,
                 <br />
-                Gopalapuram,Chennai
+                India
               </Text>
             </div>
           </div>
           <div className={classes.address}>
             <Text className={classes.title}>Address</Text>
             <Text size="sm" color="dimmed" className={classes.description}>
-              IETE Chennai centre,
+              SSN RC, Department of Physcis,
               <br />
-              No: 37, Tamil Nadu 600086
+              SSNCE, Kalavakkam,
               <br />
-              Conran Smith Road Entrance Peters Road,
+              Chennai, 603110,
               <br />
-              Gopalapuram,Chennai
+              India
             </Text>
           </div>
           <div className={classes.groups}>{groups}</div>
         </div>
-        <div className={classes.newsletter}>
-          <Text className={classes.title} id="newsletterTitle">
-            Join our Newsletter
-          </Text>
-          <TextInput
-            className={classes.newsletterInput}
-            radius="xl"
-            size="sm"
-            rightSection={
-              <ActionIcon
-                size={32}
-                radius="xl"
-                color={theme.primaryColor}
-                variant="filled"
-              >
-                {theme.dir === "ltr" ? (
-                  <AiOutlineArrowRight />
-                ) : (
-                  <AiOutlineArrowRight size="1.1rem" stroke={1.5} />
-                )}
-              </ActionIcon>
-            }
-            placeholder="Enter your email"
-            rightSectionWidth={42}
-          />
-        </div>
         <div className={classes.afterFooter}>
           <Text color="dimmed" size="sm">
-            © Copyright IETE Chennai. All rights reserved.
+            © Copyright SMTBEA-ITRE. All rights reserved.
           </Text>
 
-          <Group spacing={0} className={classes.social} position="right" noWrap>
-            <ActionIcon size="lg">
-              <BsInstagram
-                onClick={() =>
-                  window.open(
-                    "https://www.instagram.com/iete_chennai/",
-                    "_blank"
-                  )
-                }
-              />
-            </ActionIcon>
-            <ActionIcon size="lg">
-              <BiLogoLinkedin
-                size="1.05rem"
-                stroke={1.5}
-                onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/iete-chennai",
-                    "_blank"
-                  )
-                }
-              />
-            </ActionIcon>
+          <Group className={classes.social} position="right">
+            <Text
+              color="dimmed"
+              size="md"
+              onClick={() => window.open("http://gavutham.me/portfolio-v3")}
+            >
+              site crafted by{" "}
+              <span style={{ textDecoration: "underline", cursor: "pointer" }}>
+                Gavutham K
+              </span>
+            </Text>
           </Group>
         </div>
       </motion.footer>

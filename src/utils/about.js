@@ -54,22 +54,25 @@ const COUNTS = [
   },
 ];
 
-const COLLEGES = [
-  "Sri Venkateswara College of Engineering, Sriperambadur",
-  "Panimalar Institute of Technology",
-  "Easwari Engineering College",
-  "Veltech Multi Engineering College",
-  "SRM Institute of Science and Technology",
-  "Dr. M G R Educational & Research Institute",
-  "Jeppiar Institute of Technology",
-  "RMK College of Engineering and Technology",
-  "Velammal Engineering College",
-  "KCG College of Technology",
-  "Dr Rangarajan Dr Sakunthala Engg College",
-  "Saveetha Engineering College",
-  "Dr. M G R Educational & Research Institute",
-  "DMI College of Engineering",
-  "MISRIMAL NAVAJEE MUNOTH JAIN ENGINEERING COLLEGE",
+const FOCUS_AREAS = [
+  "Semiconductor materials",
+  "PV materials",
+  "Quantum Materials",
+  "Multi-Functional Materials",
+  "Optical and Electronic Materials",
+  "Biocompatible materials",
+  "Superconducting materials",
+  "Materials for Energy conversion and storage",
+  "Biosensors for Healthcare",
+  "Electrochemical sensors",
+  "Smart structures",
+  "Nanosensors",
+  "Nanostructured materials based sensors",
+  "Flexible sensors",
+  "Materials for actuators",
+  "Magnetic Materials",
+  "Microfluidic sensors",
+  "Modeling & Simulation",
 ];
 
-export { IETE, CHENNAI_CENTER, GOALS, COUNTS, COLLEGES };
+export { IETE, CHENNAI_CENTER, GOALS, COUNTS, FOCUS_AREAS };

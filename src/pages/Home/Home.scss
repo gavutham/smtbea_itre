@@ -9,7 +9,6 @@
     justify-content: space-around;
 
     .logo {
-      border-radius: 50%;
       transition: all 0.2s ease;
 
       &:hover {
@@ -17,11 +16,27 @@
       }
     }
 
+    .img-cont {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .motto {
-      font-size: 50px;
-      color: rgb(196, 196, 196);
-      max-width: 500px;
+      font-size: 34px;
       font-weight: 900;
+      max-width: 900px;
+    }
+
+    .org {
+      font-size: 18px;
+      font-weight: 400;
+      max-width: 900px;
+    }
+
+    .date {
+      font-style: italic;
+      margin-bottom: 20px;
     }
 
     @include mobile {
@@ -37,6 +52,11 @@
 
       .motto {
         font-size: 38px;
+        text-align: center;
+      }
+
+      .org {
+        font-size: 24;
         text-align: center;
       }
     }
@@ -80,18 +100,20 @@
     .quoteContent {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 70px;
+      padding: 0 40px;
 
       .quoteText {
         font-size: 36px;
         font-weight: 700;
-        max-width: 600px;
-        word-spacing: 4px;
       }
-      s .author {
-        color: gray;
-        font-weight: bold;
-        font-size: 16px;
+      .author {
+        text-indent: 100px;
+        text-align: justify;
+        color: rgb(54, 54, 54);
+        font-size: 22px;
+        line-height: 170%;
       }
     }
 
@@ -117,6 +139,15 @@
           font-size: 14px;
         }
       }
+    }
+
+    Button {
+      margin-left: 10px;
+      color: black;
+      background-color: transparent;
+      padding: 0;
+      font-size: 16px;
+      text-decoration: underline;
     }
 
     @include tablet {
@@ -152,32 +183,37 @@
     padding: 0 50px;
     gap: 100px;
     background-color: #cfd1e4;
-
-    img {
-      max-width: 500px;
-      box-shadow: $shadow1;
-      -webkit-box-shadow: $shadow1;
-      -moz-box-shadow: $shadow1;
-      border-radius: 69% 31% 61% 39% / 36% 63% 37% 64%;
-      animation: floating 2s ease infinite;
-    }
+    padding-bottom: 20px;
 
     .contents {
       .heading {
         font-size: 36px;
-        font-weight: 500;
-        margin-bottom: 65px;
-      }
-      .desc {
-        font-size: 20px;
+        font-weight: 700;
+        margin-top: 50px;
         margin-bottom: 50px;
-        line-height: 36px;
       }
-      Button {
-        color: black;
-        background-color: transparent;
-        padding: 0;
-        text-decoration: underline;
+    }
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      .items {
+        min-width: calc((100% - 140px) / 2);
+        color: #333333;
+        padding: 20px;
+        margin-bottom: 16px;
+        font-size: 18px;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        box-shadow: 0px 0px 30px -13px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 0px 30px -13px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 30px -13px rgba(0, 0, 0, 0.75);
+
+        &:hover {
+          animation: inout 0.5s ease-in-out;
+        }
       }
     }
 
@@ -216,107 +252,6 @@
         .desc {
           text-align: justify;
         }
-      }
-    }
-  }
-
-  .events {
-    min-height: calc(100vh - 125px);
-    max-height: max-content;
-    background-color: white;
-    padding: 25px 50px;
-
-    .heading {
-      display: flex;
-      align-items: baseline;
-
-      Button {
-        color: black;
-        background-color: transparent;
-        padding: 0;
-        text-decoration: underline;
-        margin-bottom: 25px;
-        margin-left: 20px;
-      }
-
-      .title {
-        font-size: 36px;
-        font-weight: 500;
-        margin-top: 10px;
-        margin-bottom: 40px;
-      }
-    }
-
-    .eventList {
-      max-height: 80%;
-      padding: 20px 100px;
-
-      .eventCard {
-        width: 100%;
-        padding: 40px;
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        transition: all 0.2s ease;
-        cursor: pointer;
-
-        &:hover {
-          box-shadow: none;
-          -webkit-box-shadow: none;
-          -moz-box-shadow: none;
-        }
-
-        img {
-          flex: 1;
-          object-fit: cover;
-          width: 180px;
-        }
-
-        .content {
-          flex: 2;
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-        }
-      }
-    }
-
-    @include mobile {
-      padding: 30px 20px 50px;
-      min-height: max-content;
-
-      .heading {
-        justify-content: space-between;
-        Button {
-          margin-left: 10px;
-        }
-
-        .title {
-          font-size: 36px;
-        }
-      }
-
-      .eventList {
-        padding: 20px;
-      }
-    }
-
-    @include tablet {
-      padding: 30px 20px 50px;
-      min-height: max-content;
-
-      .heading {
-        Button {
-          margin-left: 10px;
-        }
-
-        .title {
-          font-size: 36px;
-        }
-      }
-
-      .eventList {
-        padding: 20px;
       }
     }
   }

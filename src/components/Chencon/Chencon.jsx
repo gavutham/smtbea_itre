@@ -1,57 +1,60 @@
-import { Button, Text } from "@mantine/core";
+import { Text } from "@mantine/core";
 import "./Chencon.scss";
-import { BsBoxArrowInUpRight } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../utils/motion";
+import { textVariant2 } from "../../utils/motion";
 
 const Chencon = () => {
-  const navigate = useNavigate();
-
   return (
-    <motion.div
-      className="chencon"
-      variants={fadeIn("right", "tween", 0.1, 1)}
+    <motion.section
+      className="fees"
+      variants={textVariant2}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
     >
-      <div className="top">
-        <div className="left">
-          <Text className="eventTitle">
-            IETE CHENCON 2022 - Call for Papers
+      <div className="container">
+        <div className="title">Registration & Fee Details</div>
+        <div className="desc">
+          Registration fee covers conference kit, lunch, refreshment and
+          certificate
+        </div>
+        <div className="list">
+          <Text>
+            Students : <br />
+            <span>Rs. 1200/-</span>
           </Text>
-          <Text className="date">Hybrid Mode- MAY 20 & 21, 2022</Text>
-
-          <img
-            src="/chencon/chencon22.jpeg"
-            alt="chenon-img"
-            className="mobileImg"
-          />
-          <Text className="desc">
-            International Conference on Power of Artificial Intelligence and
-            Machine Learning for Human Empowerment
+          <Text>
+            Faculty/Staff : <br />
+            <span>Rs. 1500/-</span>
+          </Text>
+          <Text>
+            Industrial Person : <br />
+            <span>Rs. 3000/-</span>
+          </Text>
+          <Text>
+            Foreign Participants : <br />
+            <span>USD 120</span>
           </Text>
         </div>
-        <div className="right">
-          <img src="/chencon/chencon22.jpeg" alt="chenon-img" />
+      </div>
+      <div className="container">
+        <div className="title">Important Dates</div>
+        <div className="list">
+          <Text>
+            Abstract submission : <br />
+            <span>10.06.2024</span>
+          </Text>
+          <Text>
+            Acceptance notification : <br />
+            <span>15.06.2024</span>
+          </Text>
+          <Text>
+            Registration deadline : <br />
+            <span>17.06.2024</span>
+          </Text>
         </div>
       </div>
-      <div className="bottom">
-        <Text className="note">
-          <span>Note: </span>
-          Selected and presented papers will be published in the Journal of
-          Science and Technology (ISSN 2456–5660)
-          <Button
-            rightIcon={<BsBoxArrowInUpRight />}
-            onClick={() => navigate("/chencon")}
-            className="redirect"
-          >
-            Know more
-          </Button>
-        </Text>
-      </div>
-    </motion.div>
+    </motion.section>
   );
 };
 

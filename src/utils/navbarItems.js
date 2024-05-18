@@ -8,24 +8,12 @@ const navbarItems = [
     label: "About",
   },
   {
-    link: "/events",
-    label: "Events",
+    link: "/event",
+    label: "Event",
   },
   {
-    link: "/chencon",
-    label: "Chencon",
-  },
-  {
-    link: "/team",
+    link: "/committee",
     label: "Committee",
-  },
-  {
-    link: "/membership",
-    label: "Membership",
-  },
-  {
-    link: "/archive",
-    label: "Archive",
   },
   {
     link: "/contact",

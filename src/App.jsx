@@ -28,20 +28,12 @@ const router = createBrowserRouter([
         element: <Membership />,
       },
       {
-        path: "/events",
+        path: "/event",
         element: <Events />,
       },
       {
-        path: "/team",
+        path: "/committee",
         element: <Team />,
-      },
-      {
-        path: "/chencon",
-        element: <Chencon />,
-      },
-      {
-        path: "/archive",
-        element: <Archive />,
       },
       {
         path: "/contact",

@@ -21,16 +21,6 @@ const Contact = () => {
       subject: "",
       message: "",
     },
-    validate: {
-      email: (value) =>
-        /^\S+@\S+$/.test(value) ? null : "Please enter a valid email",
-      fullName: (value) =>
-        value.length < 4 ? "Your name must have at least 4 characters" : null,
-      subject: (value) =>
-        value.length < 8 ? "Subject must have atleast 8 characters" : null,
-      message: (value) =>
-        value.length < 1 ? "This field should not be left empty" : null,
-    },
   });
 
   return (
@@ -43,7 +33,7 @@ const Contact = () => {
             </div>
             <Box className="box " mx="auto">
               <motion.form
-                onSubmit={form.onSubmit((values) => console.log(values))}
+                onSubmit={form.onSubmit(() => window.location.href = "mailto:smtbea2024@gmail.com")}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
@@ -116,14 +106,6 @@ const Contact = () => {
               </div>
             ))}
           </motion.div>
-        </div>
-        <div className="mapContainer">
-          <Text className="title">Find us live here</Text>
-          <iframe
-            className="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7079564886867!2d80.25558021413603!3d13.054252116592973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52663edc820433%3A0x9d3202883a213b07!2sInstitute%20of%20Electronics%20and%20Telecommunication%20Engineers!5e0!3m2!1sen!2sin!4v1609237251098!5m2!1sen!2sin"
-            allowfullscreen="false"
-          ></iframe>
         </div>
       </div>
     </>

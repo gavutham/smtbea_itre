@@ -2,23 +2,23 @@ import { MdLocationOn, MdEmail, MdCall } from "react-icons/md";
 
 const DETAILS = [
   {
-    title: "Location",
+    title: "Address for communication",
     description:
-      "IETE Chennai centre, No: 37, Conran Smith Road Entrance Peters Road, Gopalapuram, Chennai, Tamil Nadu 600086",
+      "Dr. M.Srinivasan, SSN RC, Department of Physcis, SSNCE, Kalavakkam - 603110, India ,",
     icon: MdLocationOn,
-    link: "https://www.google.com/maps?ll=13.054247,80.257769&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=11327118796904282887"
+    link: "https://maps.app.goo.gl/CojyR9V49cFfGuzX8"
   },
   {
     title: "Email",
-    description: "ietechennai@gmail.com",
+    description: "srinivasanm@ssn.edu.in",
     icon: MdEmail,
-    link: "mailto:ietechennai@gmail.com"
+    link: "mailto:srinivasanm@ssn.edu.in"
   },
   {
     title: "Call",
-    description: "044 2835 0773",
+    description: "+91 8939316518",
     icon: MdCall,
-    link: "tel:044-2835-0773"
+    link: "tel:+918939316518"
   },
 ];
 

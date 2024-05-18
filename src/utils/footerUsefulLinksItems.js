@@ -8,20 +8,12 @@ const footerUsefulLinksItems = [
     label: "Contact",
   },
   {
-    link: "/events",
-    label: "Events",
+    link: "/event",
+    label: "Event",
   },
   {
-    link: "/chencon",
-    label: "Chencon",
-  },
-  {
-    link: "/archive",
-    label: "Archive",
-  },
-  {
-    link: "/membership",
-    label: "Membership",
+    link: "/committee",
+    label: "Committee",
   },
 ];
 

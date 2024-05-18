@@ -1,6 +1,10 @@
 @import "../../utils/constants.scss";
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   #title {
     font-size: 30px;
     margin-top: 0;

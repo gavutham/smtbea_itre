@@ -17,6 +17,15 @@
     justify-content: space-between;
     margin-bottom: 50px;
 
+    Button {
+      margin-left: 10px;
+      color: black;
+      background-color: transparent;
+      padding: 0;
+      font-size: 16px;
+      text-decoration: underline;
+    }
+
     .left {
       flex: 4;
 
@@ -46,6 +55,7 @@
         margin-right: 32px;
         display: inline-block;
         margin-top: 36px;
+        line-height: 220%;
       }
     }
 

@@ -1,29 +1,21 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Button, Text } from "@mantine/core";
+import { Button, Flex, List, Text } from "@mantine/core";
 import "./Home.scss";
-import ParticlesBackground from "../../components/Particles/ParticlesBackground";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { useNavigate } from "react-router";
-import events from "../../utils/events";
-import EventCard from "../../components/EventCard/EventCard";
-import { Carousel } from "@mantine/carousel";
-import { useRef } from "react";
-import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
 import {
   fadeIn,
   staggerContainer,
   textVariant,
   textVariant2,
+  zoomIn,
 } from "../../utils/motion";
+import { BiGift } from "react-icons/bi";
+import { FOCUS_AREAS } from "../../utils/about";
 
 const Home = () => {
   const navigate = useNavigate();
-
-  events.sort((a, b) => b.date.getTime() - a.date.getTime());
-  const reqEvents = events.slice(0, 4);
-  const autoplay = useRef(Autoplay({ delay: 5000 }));
-
   return (
     <div>
       <div className="home">
@@ -34,19 +26,55 @@ const Home = () => {
           viewport={{ once: false, amount: 0.25 }}
           className="landing"
         >
-          <div style={{ position: "absolute" }}>
-            <ParticlesBackground />
-          </div>
           <motion.span variants={fadeIn("right", "tween", 0.2, 1)}>
-            <Text className="motto">Learning Today, Leading Tomorrow</Text>
+            <Text className="motto" mb="lg">
+              <Text>
+                3rd International Conference on Sustainable Materials and
+                Technologies for Bio and Energy Applications
+              </Text>
+              <Text>&</Text>
+              <Text>Indo- Taiwan Workshop on Renewable Energy</Text>
+            </Text>
+            <Text className="org">
+              <div>
+                <Text className="date">during, 1-3 of July 2024</Text>
+                <Text fw={"bolder"} mb="sm">
+                  Organized by
+                </Text>
+                <Text mb="md">
+                  SSN Research Centre , Department of Physics , SSN
+                  Institutions, Chennai – 603110, Tamilnadu, India Department of
+                  Mechanical Engineering, National Central University , Zhongli
+                  District, Taiwan
+                </Text>
+              </div>
+              <div>
+                <Text fw={"bolder"} mb="sm">
+                  In association with
+                </Text>
+                <Text mb="md">
+                  Elavenil Science Association & Indian Association for Crystal
+                  Growth
+                </Text>
+              </div>
+            </Text>
           </motion.span>
-          <motion.img
-            variants={fadeIn("left", "tween", 0.2, 1)}
-            src="/iete.jpg"
-            height={150}
-            width={150}
-            className="logo"
-          />
+          <Flex className="img-cont">
+            <motion.img
+              variants={fadeIn("left", "tween", 0.2, 1)}
+              src="/ssn.png"
+              height={150}
+              width={150}
+              className="logo"
+            />
+            <motion.img
+              variants={fadeIn("left", "tween", 0.2, 1)}
+              src="/taiwan.png"
+              height={150}
+              width={150}
+              className="logo"
+            />
+          </Flex>
         </motion.div>
         <motion.div
           variants={staggerContainer}
@@ -55,14 +83,31 @@ const Home = () => {
           viewport={{ once: false, amount: 0.25 }}
           className="quote"
         >
-          <img src="/modi.png" alt="pm-modi-img" />
           <motion.div variants={textVariant(0.2)} className="quoteContent">
-            <Text className="quoteText">
-              "INNOVATION FOR THE PEOPLE AND BY THE PEOPLE IS THE REACTION OF
-              OUR NEW INDIA"
-            </Text>
+            <Text className="quoteText">About the Conference and Workshop</Text>
             <Text className="author">
-              - NARENDRA MODI, HON’BLE PRIME MINISTER OF INDIA.
+              3rd International Conference on Sustainable Materials and
+              Technologies for Bio and Energy Applications focuses on the
+              advancements in the research areas of materials and sensors for
+              Bio and Energy applications. As IoT technology advances,
+              requirement for modern and new sensors with ultra-sensitivity,
+              high stability and selectivity has emerged. Major theme of the
+              conference is to explore biocompatible materials, energy
+              materials, energy storage, biosensors, and electrochemical
+              sensors. There will be Plenary/Keynote Lectures, Tutorials, and
+              Invited Talks specially formulated by the Technical Program
+              Committee to ensure an intellectually benefitting experience for
+              the participants. As part of this conference, the Indo- Taiwan
+              workshop on Renewable Energy, that aims to serve as a bridge
+              between the scientists of India and Taiwan in the field of
+              renewable energy will be organized.
+              <Button
+                variant="white"
+                rightIcon={<BsBoxArrowInUpRight stroke="4" />}
+                onClick={() => navigate("/event")}
+              >
+                Know more
+              </Button>
             </Text>
           </motion.div>
         </motion.div>
@@ -74,71 +119,29 @@ const Home = () => {
           viewport={{ once: false, amount: 0.25 }}
         >
           <motion.div className="contents" variants={textVariant2}>
-            <Text className="heading">What we Do?</Text>
-            <Text className="desc">
-              Chennai Centre of IETE is committed to attain commanding heights
-              and achieve the status of “Centre of Excellence” in Technical,
-              Engineering & Management education by harnessing the best
-              practices in educational innovation and through its concerted
-              endeavors like quality teaching, industrial consultancy and
-              training to the aspirants including corporate training.
-            </Text>
-            <Button
-              variant="white"
-              rightIcon={<BsBoxArrowInUpRight stroke="4" />}
-              onClick={() => navigate("/about")}
+            <Text className="heading">Focus Areas</Text>
+            <List
+              className="list"
+              spacing="xs"
+              size="sm"
+              center
+              icon={<BiGift />}
             >
-              Know more
-            </Button>
-          </motion.div>
-          <img
-            src="/discussion.jpeg"
-            alt="discussion-pic"
-            className="picture"
-          />
-        </motion.div>
-        <div className="events">
-          <div className="heading">
-            <Text className="title">Recent Events</Text>
-            <Button
-              variant="white"
-              rightIcon={<BsBoxArrowInUpRight stroke="4" />}
-              onClick={() => navigate("/events")}
-            >
-              All Events
-            </Button>
-          </div>
-
-          <div className="eventList">
-            <Carousel
-              maw="100%"
-              plugins={[autoplay.current]}
-              onMouseEnter={autoplay.current.stop}
-              onMouseLeave={autoplay.current.reset}
-              loop
-              dragFree
-              withIndicators
-              styles={{
-                control: {
-                  "&[data-inactive]": {
-                    opacity: 0,
-                    cursor: "default",
-                  },
-                },
-                indicator: {
-                  backgroundColor: "gray",
-                  transition: "width 250ms ease",
-                },
-              }}
-            >
-              {reqEvents.map((e) => (
-                <Carousel.Slide key={e.name}>
-                  <EventCard event={e} />
-                </Carousel.Slide>
+              {FOCUS_AREAS.map((e) => (
+                <List.Item className="items" key={e}>
+                  <motion.span
+                    variants={zoomIn(0.1, 0.5)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, amount: 0.25 }}
+                  >
+                    {e}
+                  </motion.span>
+                </List.Item>
               ))}
-            </Carousel>
-          </div>
-        </div>
+            </List>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
