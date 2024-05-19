@@ -270,7 +270,9 @@ const Footer = () => {
             <Text
               color="dimmed"
               size="md"
-              onClick={() => window.open("http://gavutham.me/portfolio-v3")}
+              onClick={() =>
+                window.open("https://www.linkedin.com/in/gavutham-kanagaraj/")
+              }
             >
               site crafted by{" "}
               <span style={{ textDecoration: "underline", cursor: "pointer" }}>

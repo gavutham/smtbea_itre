@@ -28,7 +28,7 @@ const Webinar = () => {
             <Button
               variant="white"
               rightIcon={<BsBoxArrowInUpRight stroke="4" />}
-              onClick={() => navigate("/event#register")}
+              onClick={() => window.open("https://forms.gle/iJGFoJToK9hRGaaGA")}
             >
               Registration Link
             </Button>
