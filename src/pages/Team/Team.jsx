@@ -33,6 +33,11 @@ const Team = () => {
           <div className="name">Mr. C. Balaji, SSN Research Centre</div>
         </div>
         <div className="wrapper">
+          <div className="heading">Conveners</div>
+          <div className="name">Dr. M. Srinivasan, SSN Research Centre</div>
+          <div className="name">Mr. C. Balaji, SSN Research Centre</div>
+        </div>
+        <div className="wrapper">
           <div className="heading">Co-Conveners</div>
           <div className="name">Dr. A. Murugesan, Dept. Chemistry, SSNCE</div>
           <div className="name">Dr. Thi-Hoai-Thu Nguyen, NCU, Taiwan</div>
