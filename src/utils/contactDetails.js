@@ -4,7 +4,7 @@ const DETAILS = [
   {
     title: "Address for communication",
     description:
-      "Dr. M.Srinivasan, SSN RC, Department of Physcis, SSNCE, Kalavakkam - 603110, India ,",
+      "Dr. M.Srinivasan, SSN RC, Department of Physics, SSNCE, Kalavakkam - 603110, India ,",
     icon: MdLocationOn,
     link: "https://maps.app.goo.gl/CojyR9V49cFfGuzX8"
   },

@@ -237,7 +237,7 @@ const Footer = () => {
             <div className={classes.tabletAddress}>
               <Text className={classes.title}>Address</Text>
               <Text size="sm" color="dimmed" className={classes.description}>
-                SSN RC, Department of Physcis,
+                SSN RC, Department of Physics,
                 <br />
                 SSNCE, Kalavakkam,
                 <br />
@@ -250,7 +250,7 @@ const Footer = () => {
           <div className={classes.address}>
             <Text className={classes.title}>Address</Text>
             <Text size="sm" color="dimmed" className={classes.description}>
-              SSN RC, Department of Physcis,
+              SSN RC, Department of Physics,
               <br />
               SSNCE, Kalavakkam,
               <br />
