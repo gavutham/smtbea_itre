@@ -274,7 +274,7 @@ const Footer = () => {
                 window.open("https://www.linkedin.com/in/gavutham-kanagaraj/")
               }
             >
-              site crafted by{" "}
+              development by{" "}
               <span style={{ textDecoration: "underline", cursor: "pointer" }}>
                 Gavutham K
               </span>
