@@ -30,7 +30,7 @@ const About = () => {
             <Button
               variant="white"
               rightIcon={<BsBoxArrowInUpRight stroke="4" />}
-              onClick={() => navigate("/event")}
+              onClick={() => navigate("/registration")}
             >
               Know more
             </Button>

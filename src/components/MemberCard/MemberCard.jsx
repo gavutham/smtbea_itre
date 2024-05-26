@@ -1,14 +1,10 @@
 /* eslint-disable react/prop-types */
 import { Card, Group, Text } from "@mantine/core";
 import "./MemberCard.scss";
-import { GoMail } from "react-icons/go";
 import { motion } from "framer-motion";
 import { textVariant2 } from "../../utils/motion";
 
 const MemberCard = ({ member }) => {
-  const mailTo = (email) => {
-    window.location.href = `mailto:${email}`;
-  };
 
   return (
     <Card
@@ -34,22 +30,12 @@ const MemberCard = ({ member }) => {
         </Text>
       </Group>
 
-      <Text size="md" color="dimmed" weight={500} mb={10}>
-        {member.position}
-      </Text>
 
       {member.desc && (
-        <Text size="sm" color="dimmed" mb={20}>
+        <Text size="sm" color="dimmed" weight="bold" mb={20}>
           {member.desc}
         </Text>
       )}
-
-      <Group className="email" onClick={() => mailTo(member.email)}>
-        <GoMail size={15} className="icon" />
-        <Text size="sm" color="dimmed" className="address">
-          {member.email}
-        </Text>
-      </Group>
     </Card>
   );
 };

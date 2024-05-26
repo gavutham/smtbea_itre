@@ -12,6 +12,10 @@ const footerUsefulLinksItems = [
     label: "Registration",
   },
   {
+    link: "/speakers",
+    label: "Speakers",
+  },
+  {
     link: "/committee",
     label: "Committee",
   },

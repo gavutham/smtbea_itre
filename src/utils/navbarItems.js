@@ -16,6 +16,10 @@ const navbarItems = [
     label: "Committee",
   },
   {
+    link: "/speakers",
+    label: "Speakers",
+  },
+  {
     link: "/contact",
     label: "Contact",
   },
