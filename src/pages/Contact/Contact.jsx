@@ -102,7 +102,7 @@ const Contact = () => {
                   <Title className="detitle">{e.title}</Title>
                 </div>
 
-                <Text className="detailsDescription">{e.description}</Text>
+                <Text className="detailsDescription">{e.description.split("\n").map(word => <>{word.toString()}<br/></>)}</Text>
               </div>
             ))}
           </motion.div>

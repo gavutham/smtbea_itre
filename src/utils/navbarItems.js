@@ -8,8 +8,8 @@ const navbarItems = [
     label: "About",
   },
   {
-    link: "/event",
-    label: "Event",
+    link: "/registration",
+    label: "Registration",
   },
   {
     link: "/committee",

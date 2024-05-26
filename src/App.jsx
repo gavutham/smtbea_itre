@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element: <Membership />,
       },
       {
-        path: "/event",
+        path: "/registration",
         element: <Events />,
       },
       {

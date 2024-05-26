@@ -30,9 +30,8 @@ const Home = () => {
             <Text className="motto" mb="lg">
               <Text>
                 3rd International Conference on Sustainable Materials and
-                Technologies for Bio and Energy Applications
+                Technologies for Bio and Energy Applications & 
               </Text>
-              <Text>&</Text>
               <Text>Indo- Taiwan Workshop on Renewable Energy</Text>
             </Text>
             <Text className="org">

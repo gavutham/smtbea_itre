@@ -8,8 +8,8 @@ const footerUsefulLinksItems = [
     label: "Contact",
   },
   {
-    link: "/event",
-    label: "Event",
+    link: "/registration",
+    label: "Registration",
   },
   {
     link: "/committee",
