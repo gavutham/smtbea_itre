@@ -30,6 +30,11 @@ const team = [
     img: "6.png",
   },
   {
+    name: "Prof. Anil Kottantharayil",
+    desc: "IITB, Mumbai, India",
+    img: "17.jpg",
+  },
+  {
     name: "Prof. Shu-San Hsiau",
     desc: "National Central University, Taiwan",
     img: "7.jpg",
@@ -78,6 +83,21 @@ const team = [
     name: "Dr. M. Prasath",
     desc: "Periyar University, Dharmapuri",
     img: "16.png",
+  },
+  {
+    name: "Dr. Chieh Hu",
+    desc: "Global Wafers, Taisil Branch, Taiwan",
+    img: "18.jpg",
+  },
+  {
+    name: "Dr.Radha Perumal Ramasamy",
+    desc: "Anna University, Chennai, India",
+    img: "19.jpg",
+  },
+  {
+    name: "Dr.J.B.Sudharsan",
+    desc: "CIT, Chennai, India",
+    img: "20.png",
   },
 ];
 
